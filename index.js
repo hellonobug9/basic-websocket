@@ -8,6 +8,7 @@ const server = http.createServer(app);
 const io = socket(server)
 
 app.use(express.static(staticHTML))
+console.log('1')
 io.on('connection', socket => {
     console.log('Hello new socket!!!');
     socket.emit('message', 'Welcome!')
